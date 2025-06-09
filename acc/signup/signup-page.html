@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت نام</title>
+    <script src="https://kit.fontawesome.com/7e2e41e76c.js" crossorigin="anonymous"></script>
+    <style>
+        @font-face {
+            font-family: vazir;
+            src: url(../../Vazir-Medium.ttf);
+        }
+
+        * {
+            font-family: vazir;
+            margin: 0;
+            padding: 0;
+        }
+
+        .input {
+            padding: 5px;
+            border-radius: 60px;
+        }
+
+        #submit {
+            background-color: white;
+            padding: 5px;
+            border-radius: 10px;
+            width: 50px;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .right{
+            display: flex;
+            border: 1px solid black;
+            flex-direction: column-reverse;
+            width: 300px;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.5s ease;
+        }
+
+        .right:hover {
+            box-shadow: 0px 0px 20px blue;
+            transition: all 0.5s ease;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 10px;
+        }
+
+        .input::placeholder {
+            color: black;
+        }
+        .back-bot{
+            border: 1px solid black;
+            padding: 5px;
+            width: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .right div{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="right">
+        <form method="post">
+            <input type="text" name="fullname" id="fullname" placeholder="fullname" class="input">
+            <input type="text" name="username" id="username" placeholder="username" class="input">
+            <input type="password" name="password" id="password" placeholder="password" class="input">
+            <input type="email" name="email" id="email" placeholder="email" class="input">
+            <input type="submit" value="go" id="submit">
+        </form>
+        <div>
+            <i class="fa-solid fa-chevron-right back-bot" onclick="back()"></i>
+        </div>
+    </div>
+    <div class="left"></div>
+    <script>
+        function back(){
+            history.back()
+        }
+        document.getElementById("submit").addEventListener("click",()=>{
+            let a = document.querySelector("#username").value;
+            document.cookie = `localhost = ${a}; max-age = 3600; path=/`
+        })
+    </script>
+</body>
+
+</html>

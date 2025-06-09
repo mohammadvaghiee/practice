@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>وب شخصی من</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="save-con"></div>
+    <!-- منوی بالایی -->
+    <nav>
+        <ul>
+            <li draggable="true" id="a"><a href="#about">درباره من</a></li>
+            <li draggable="true" id="a"><a href="#skills">مهارت‌ها</a></li>
+            <li draggable="true" id="a"><a href="#profile">پروفایل</a></li>
+            <li><a href="#contact">تماس با من</a></li>
+            <li><a href="/acc/signup/signup-page.html" id="acc">ورود </a></li>
+            <li><a class="b" href="#">کاربردی</a></li>
+        </ul>
+    </nav>
+    <div class="tab">
+        <ul>
+            <li><a href="/todo/list.html">تودو لیست</a></li>
+            <li><a href="/flappy/bird.html">فلپی برد</a></li>
+            <li><a href="/chrome/dino.html">دایناسور</a></li>
+        </ul>
+    </div>
+    <!-- هدر -->
+    <header>
+        <h1 id="setname"></h1><h1>سلام</h1>
+        <p>وب‌توسعه‌دهنده آینده!</p>
+    </header>
+
+    <!-- درباره من -->
+    <section id="about">
+        <h2>درباره من</h2>
+        <p>درباره:</p><p contenteditable="true" id="info">من یک تازه‌کار در حوزه طراحی و توسعه وب هستم. علاقه‌مند به یادگیری مداوم و خلق چیزهای جدید.</p>
+    </section>
+
+    <!-- مهارت‌ها -->
+    <section id="skills">
+        <h2>مهارت‌ها</h2>
+        <ul>
+            <li draggable="true" id="a">HTML</li>
+            <li draggable="true" id="b">CSS</li>
+            <li draggable="true" id="a">JavaScript (در حال یادگیری)</li>
+        </ul>
+    </section>
+
+    <!-- پروفایل با اپلود عکس -->
+    <section id="profile">
+        <h2>پروفایل من</h2>
+        <div class="avatar-container">
+            <input type="file" id="avatarInput" accept="image/*">
+            <img id="avatarPreview" src="https://via.placeholder.com/150"  alt="عکس پروفایل">
+            <p>نام شما: <input type="text" id="name" class="input"></p>
+        </div>
+    </section>
+
+    <!-- تماس با من -->
+    <section id="contact">
+        <h2>تماس با من</h2>
+        <p>تلفن: <input type="number" id="email" class="input" maxlength="11" minlength="11"></p>
+        <form id="form">
+            <input type="submit" value="ذخیره" id="sub">
+        </form>
+    </section>
+    <!-- اسکریپت -->
+    <script src="script.js"></script>
+</body>
+</html>

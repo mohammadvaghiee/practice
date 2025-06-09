@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS bsmanir_code;
+USE bsmanir_code;
+CREATE TABLE IF NOT EXISTS signup(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fullname VARCHAR(300) NOT NULL,
+    username VARCHAR(300) NOT NULL UNIQUE,
+    password VARCHAR(200) NOT NULL,
+    email VARCHAR(300) NOT NULL
+)

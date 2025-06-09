@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>اطلاعات را وارد کنید سپس رو دکمه اضافه  کردن کلیک کنید تا به لیست اضافه شه</h2>
+    </header>
+    <hr>
+    <section id="add-task">
+        <form>
+            <input type="text" id="title">
+            <textarea id="dis"></textarea>
+            <input type="datetime-local" id="time">
+            <select id="Priority">
+                <option value="3">Important</option>
+                <option value="2">Medium</option>
+                <option value="1">Low</option>
+            </select>
+            <input type="submit" id="sub" value="add">
+        </form>
+    </section>
+    <hr>
+    <h2>در اینجا لیست کار های خود را میتوانید ببینید</h2>
+    <hr>
+    <section id="con-task">
+        <table><tr>
+            <th>id</th>
+            <th>title</th>
+            <th>discription</th>
+            <th>time</th>
+            <th>Priority</th>
+            <th>delet</th>
+        </tr></table>
+        <ul id="ul"></ul>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

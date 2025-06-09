@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+    <style>
+        @font-face {
+            font-family: v;
+            src: url(../Vazir-Medium.ttf);
+        }
+        *{
+            direction: rtl;
+            font-family: v;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>انجام شد شما تا چند لحظه دیگر به پنل کاربری خود منتقل میشوید...</h1>
+    </div>
+    <script>
+        setTimeout(()=>{
+            open("panel/panel.html","_self")
+        },3000)
+    </script>
+</body>
+</html>

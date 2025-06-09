@@ -1,0 +1,146 @@
+@font-face {
+    font-family: v;
+    src: url(../Vazir-Medium.ttf);
+}
+*{
+    font-family: v;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+body h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+body{
+    height: 100vh;
+}
+header{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+#add-task{
+    height: 200px;
+}
+form{
+    display: grid;
+    grid-template-areas: 
+    "t d d r"
+    "ti d d a";
+    height: 100%;
+    margin: 0 10px;
+}
+#title{
+    grid-area: t;
+    padding: 10px;
+}
+#time{
+    grid-area: ti;
+}
+#dis{
+    padding: 10px;  
+    grid-area: d;
+}
+#Priority{
+    grid-area: r;
+}
+#sub{
+    grid-area: a;
+}
+
+@media screen and (max-width: 480px) {
+    form{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 8px;
+    }
+    #title{
+        grid-column: span 2 / span 2;
+    }
+    #time{
+        grid-column: span 3 / span 3;
+        grid-row-start: 2;
+    }
+    #dis{
+        grid-column: span 3 / span 3;
+        grid-row: span 2 / span 2;
+        grid-row-start: 3;    }
+    #Priority{
+        grid-column-start: 3;    
+    }
+    #sub{
+        grid-column: span 3 / span 3;
+        grid-row-start: 5;
+    }
+}
+#con-task{
+    width: 100%;
+}
+table,tr,th{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table{
+    width: 100%;
+}
+li{
+    list-style-type: none;
+    display: flex;
+}
+
+.li-con{
+    width: 100%;
+}
+.id-con{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 6%;
+}
+.title-con{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 11%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: 1px solid black;
+    margin-left: 5px;
+}
+.dis-con{
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 33%;
+}
+.time-con{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 185px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.Priority-con{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 298px;
+}
+.delbtn-con{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 208px;
+}
+h1{
+    background-color: black;
+    color: white;
+}
