@@ -81,9 +81,11 @@ function getCookie(name) {
     }
   }
 }
-document.getElementById("acc").addEventListener("click",(e)=>{
-    console.log(document.co)
-    if(getCookie("localhost")){
-        e.target.href = "https://localhost/acc/panel/panel.html"
-    }
-})
+if(getCookie("localhost")){
+    document.getElementById("account").style.display = "flex"
+    document.getElementById("log-sign").style.display = "none"
+}
+if(! getCookie("localhost")){
+    document.getElementById("account").style.display = "none"
+    document.getElementById("log-sign").style.display = "flex"
+}
