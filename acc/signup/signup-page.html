@@ -87,7 +87,7 @@
 
 <body>
     <div class="right">
-        <form method="post">
+        <form action="go.php" method="post">
             <input type="text" name="fullname" id="fullname" placeholder="fullname" class="input">
             <input type="text" name="username" id="username" placeholder="username" class="input">
             <input type="password" name="password" id="password" placeholder="password" class="input">
@@ -105,7 +105,7 @@
         }
         document.getElementById("submit").addEventListener("click",()=>{
             let a = document.querySelector("#username").value;
-            document.cookie = `localhost = ${a}; max-age = 3600; path=/`
+            document.cookie = `bsman = ${a}; max-age = 3600; path=/`
         })
     </script>
 </body>

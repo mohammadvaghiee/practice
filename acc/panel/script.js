@@ -9,4 +9,4 @@ function getCookie(name) {
 }
 
 
-document.querySelector("#name").textContent = getCookie("localhost")
+document.getElementById("name").innerText = getCookie("bsman")

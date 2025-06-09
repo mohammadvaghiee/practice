@@ -81,11 +81,11 @@ function getCookie(name) {
     }
   }
 }
-if(getCookie("localhost")){
+if(getCookie("bsman")){
     document.getElementById("account").style.display = "flex"
     document.getElementById("log-sign").style.display = "none"
 }
-if(! getCookie("localhost")){
+if(! getCookie("bsman")){
     document.getElementById("account").style.display = "none"
     document.getElementById("log-sign").style.display = "flex"
 }
