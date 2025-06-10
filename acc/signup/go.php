@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost","root","","bsmanir_code");
+$conn = new mysqli("localhost","bsmanir_code","@MPmp13891389","bsmanir_code");
 if($conn->connect_error){
     die("connect Error:". $conn->connetct_error);
 }
